@@ -39,6 +39,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             IdentitiesOnly yes
             Port 22
             User aaltouser
+        ```
         - Copy the content of ~/.ssh/id_rsa.pub and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
 - To access the VM:
     - `export DISPLAY=127.0.0.1:0; ssh -X mds` # Fix the *DISPLAY* variable as required
