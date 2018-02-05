@@ -1,6 +1,6 @@
 #### The repository is organized as follows
 - Each folder contains the presentation, code, and instructions for the tutorials and assignments:
-    - [1_sql](./1_sql): SQL and semi-structured data using *PostgresDB 10* 09/02/2018.
+    - [1_sql](./1_sql): SQL and semi-structured data using *PostgreSQL 10* 09/02/2018.
     - [2_search](./2_search): Information retrieval and search with *ElasticSearch* 05/03/2018.
     - [3_bigdata](./3_bigdata): Big Data processing with *Apache Spark* 19/03/2018.
     
