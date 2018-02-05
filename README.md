@@ -42,17 +42,20 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             HostName mds.cs.aalto.fi
             IdentityFile ~/.ssh/id_rsa # Use the private key of the corresponding public key that you added to http://version.aalto.fi
             IdentitiesOnly yes
+            Compression yes
+            ForwardX11 yes
             Port 22
             User {your-aalto-username}
         ```
 
 #### 2) Accessing the VM 
 - Note: You have to be using a machine inside Aalto's domain. At home and in personal computers, use the VPN (https://inside.aalto.fi/display/ITServices/VPN).
-- `export DISPLAY=127.0.0.1:0; ssh -X mds` # Fix the *DISPLAY* variable as required
+- `export DISPLAY=127.0.0.1:0; ssh mds` # Fix the *DISPLAY* variable as required
     - The first time you connect, you will see a message "The authenticity of host ... ... Are you sure you want to continue connecting (yes/no)?"
     - Type `yes`
 
 #### 3) Starting *Jupyter Notebook*
+- 
 - In the VM run the command `source ~/env35/bin/activate; jupyter notebook`
 - This should prompt a Chromium Web Browser, if not, check your configuration. 
 - The password is `db2018`
