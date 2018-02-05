@@ -57,4 +57,6 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
 - This should prompt a Chromium Web Browser, if not, check your configuration. 
 - The password is `db2018`
 
-Further instructions are provided in the corresponding session folders
+Further instructions are provided in the corresponding session folders.
+
+You could also work in your personal computer, just [download the datasets](https://www.dropbox.com/sh/smgj8qe5sj9k156/AABJsSkYGqJt-yrQDiPtooMHa?dl=0) and install the required software in your machine.
