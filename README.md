@@ -42,10 +42,11 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
         ```
         - Copy the content of ~/.ssh/id_rsa.pub and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
 - To access the VM:
+    - Note:You have to be inside Aalto's network. At home, use the VPN (https://inside.aalto.fi/display/ITServices/VPN).
     - `export DISPLAY=127.0.0.1:0; ssh -X mds` # Fix the *DISPLAY* variable as required
         - The first time you connect, you will see a message "The authenticity of host ... ... Are you sure you want to continue connecting (yes/no)?"
         - Type `yes`
 - Starting *Jupyter Notebook*
     - In the VM run the command `source ~/env35/bin/activate; jupyter notebook`
+    - This should prompt a Chromium Web Browser, if not, check your configuration. 
     - The password is `db2018`
-    
