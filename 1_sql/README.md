@@ -1,4 +1,4 @@
-The first step is to connect to the virtual machine as [explained](../README.md#using-the-virual-machines)
+The first step is to connect to the virtual machine as [explained](../README.md#using-the-virual-machines-)
 
 #### 1) Starting the database
 - By default, the postgres database service is not running.
