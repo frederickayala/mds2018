@@ -4,7 +4,7 @@
     - [2_search](./2_search): Information retrieval and search with *ElasticSearch* 05/03/2018.
     - [3_bigdata](./3_bigdata): Big Data processing with *Apache Spark* 19/03/2018.
     
-#### For **Windows 10** users
+#### Special instructions for **Windows 10** users
 In this course we provide a VM to the students. To access it follow the next steps: 
 ##### 1) Install the Linux subsystem:
 - Go to Settings -> For Developers: Enable *Developer Mode*. Restart the machine after the installation.
