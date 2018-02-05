@@ -7,8 +7,9 @@
 - For **Windows 10** users
     - Installing Linux subsystem:
         - Go to Settings -> For Developers: Enable *Developer Mode*. Restart the machine after the installation.
+        - Turn Windows Features on or off, and check the box of `Windows Subsystem for Linux`, click OK and restart.
         - Open the windows menu and type `Command Prompt`, right-click and select `Run as adminsitrator`.
-        - Run the following command `lxrun /install /y` and type a username and password for the root user.
+        - In the terminal, run the following command `lxrun /install /y` type a username and password for the root user.
     - Installing X environment:
         - Download *vcxsrv* from `https://sourceforge.net/projects/vcxsrv/` and install it
         - To start the X environment run the application `VcXsrv`
