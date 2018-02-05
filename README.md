@@ -3,7 +3,12 @@
     - [1_sql](./1_sql): SQL and semi-structured data using *PostgreSQL 10* 09/02/2018.
     - [2_search](./2_search): Information retrieval and search with *ElasticSearch* 05/03/2018.
     - [3_bigdata](./3_bigdata): Big Data processing with *Apache Spark* 19/03/2018.
-    
+- Dataset:
+    - For the tree tutorials and programming assignments we will be working with the [MovieLens 1M Dataset](http://grouplens.org/datasets/movielens/1m/) dataset provided by GroupLens Research.
+    - Check the [README](http://files.grouplens.org/datasets/movielens/ml-1m-README.txt) file of the dataset for additional information.
+    - A pre-processed version of the dataset is available in [data](./data) and that is the file that we will use.
+    - The pre-processed version includes a knowledge base of [DBpedia](https://dbpedia.org). The mapping between movies and DBpedia Resources was taken from [here](https://github.com/sisinflab/LODrecsys-datasets/tree/master/Movielens1M).
+
 #### Special instructions for **Windows 10** users
 In this course we provide a VM to the students. To access it follow the next steps: 
 ##### 1) Install the Linux subsystem:
@@ -62,4 +67,4 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
 
 Further instructions are provided in the corresponding session folders.
 
-You could also work in your personal computer, just [download the datasets](https://www.dropbox.com/sh/smgj8qe5sj9k156/AABJsSkYGqJt-yrQDiPtooMHa?dl=0) and install the required software in your machine.
+You could also work in your personal computer, just clone the repo to your machine and install the required software.

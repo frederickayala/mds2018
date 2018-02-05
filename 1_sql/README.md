@@ -73,4 +73,5 @@ You can use the PostgreSQL Shell (psql) or if you prefer pgAdmin4.
     - `Username`: `movielens_user`
     - `Password`: `movi3s`
     - Check `Save password`
-- Expand `localhost` Now you can start the Query Tool from `Tools->Query Tool`
+- Expand `localhost->Databases`, right click on `movielens` and then `Query Tool...`
+- Work on the assignment
