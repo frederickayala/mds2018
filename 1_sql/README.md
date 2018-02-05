@@ -18,7 +18,7 @@ The first step is to connect to the virtual machine as [explained](../README.md#
 
 #### 3) Creating the tables and importing the data
 - Extract the dataset:
-    - `tar -zxvf /home/ubuntu/mds2018/data/movielens.tar.gz -C /home/ubuntu/`
+    - `tar -zxvf /home/ubuntu/mds2018/data/modern_db_dataset_sql.tar.gz -C /home/ubuntu/`
 - Start the PostgreSQL shell as movielens_user: `psql -h localhost -d movielens -U movielens_user -W` and type the password `movi3s` 
 - Paste the following commands:
 ```
