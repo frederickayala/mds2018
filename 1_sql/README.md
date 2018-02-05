@@ -50,9 +50,9 @@ CREATE TABLE dbpedia
  
 CREATE INDEX dbpedia_movie_id ON dbpedia USING btree (movie_id);
 ```
-- Load data to the movies table `\copy movie from '/home/ubuntu/modern_db_dataset/movies.csv' csv header;`
-- Load data to the user_profile table `\copy user_profile from '/home/ubuntu/modern_db_dataset/users.csv' csv header;`
-- Load data to the movies table `\copy rating from '/home/ubuntu/modern_db_dataset/ratings.csv' csv header;`
+- Load data to the movies table `\copy movie from '/home/ubuntu/modern_db_dataset/movie.csv' csv header;`
+- Load data to the user_profile table `\copy user_profile from '/home/ubuntu/modern_db_dataset/user.csv' csv header;`
+- Load data to the movies table `\copy rating from '/home/ubuntu/modern_db_dataset/rating.csv' csv header;`
 - Load data to the movies table `\copy dbpedia from '/home/ubuntu/modern_db_dataset/dbpedia.csv' csv header;`
 
 #### 4) Doing the assignment
