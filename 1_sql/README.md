@@ -52,16 +52,19 @@ CREATE INDEX dbpedia_movie_id ON dbpedia USING btree (movie_id);
 ```
 - Load data to the movies table `\copy movie from '/home/ubuntu/movielens/movie.csv' csv header;`
 - Load data to the user_profile table `\copy user_profile from '/home/ubuntu/movielens/user.csv' csv header;`
-- Load data to the movies table `\copy rating from '/home/ubuntu/movielens/rating.csv' csv header;`
+- Load data to the movies table (It can take few minutes) `\copy rating from '/home/ubuntu/movielens/rating.csv' csv header;`
 - Load data to the movies table `\copy dbpedia from '/home/ubuntu/movielens/dbpedia.csv' csv header;`
 
 #### 4) Doing the assignment
-You can use the PostgreSQL
-#### 3) Starting pgAdmin4
+You can use the PostgreSQL Shell (psql) or if you prefer pgAdmin4.
+
+#### 4.1) Doing the assignment with psql
+- Start the PostgreSQL shell as movielens_user: `psql -h localhost -d movielens -U movielens_user -W` and type the password `movi3s`
+- Work on the assignment 
+
+#### 4.2) Doing the assignment with pgAdmin4
 - Note: Remember to access the VM with X11 forwarding: `export DISPLAY=127.0.0.1:0; ssh mds` and to set *Compression* and *ForwardingX11* to yes in the `~\.ssh\config` file
 - Run the command: `pgAdmin4`
-
-#### 4) Adding the localhost server
 - Right click on `Servers` and then click on `Create->Server...`
 - In `General->Name` write `localhost`
 - Switch to the `Connections` tab and fill the form:
@@ -70,4 +73,4 @@ You can use the PostgreSQL
     - `Username`: `movielens_user`
     - `Password`: `movi3s`
     - Check `Save password`
-- Now you can start the Query Tool from `Tools->Query Tool`
+- Expand `localhost` Now you can start the Query Tool from `Tools->Query Tool`
