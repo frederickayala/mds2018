@@ -4,22 +4,23 @@
     - [2_search](./2_search): Information retrieval and search with *ElasticSearch* 05/03/2018.
     - [3_bigdata](./3_bigdata): Big Data processing with *Apache Spark* 19/03/2018.
     
-- For **Windows 10** users
-    - Installing Linux subsystem:
-        - Go to Settings -> For Developers: Enable *Developer Mode*. Restart the machine after the installation.
-        - Turn Windows Features on or off, and check the box of `Windows Subsystem for Linux`, click OK and restart.
-        - Open the windows menu and type `Command Prompt`, right-click and select `Run as adminsitrator`.
-        - In the terminal, run the following command `lxrun /install /y` type a username and password for the root user.
-    - Installing X environment:
-        - Download *vcxsrv* from `https://sourceforge.net/projects/vcxsrv/` and install it
-        - To start the X environment run the application `VcXsrv`
-    - Starting the linux subsystem:
-        - Press `Windows + R` and run `cmd`
-        - Run the command `bash`, this gives you access to the linux terminal on Windows.        
-    - From here, Windows users can follow the linux instructions, 
-    just be sure to start the `VcXsrv` and run the instructions on the bash terminal.
-    - If copy/past does not work on Chromium or pgAdmin, right-click on the `VcXsrv` icon in the task bar and un-check `Clipboard may use PRIMARY selection`
-    - If you do not want to use the linux subsystem, try cygwin.
+#### For **Windows 10** users
+In this course we provide a VM to the students. To access it follow the next steps: 
+##### 1) Install the Linux subsystem:
+- Go to Settings -> For Developers: Enable *Developer Mode*. Restart the machine after the installation.
+- Turn Windows Features on or off, and check the box of `Windows Subsystem for Linux`, click OK and restart.
+- Open the windows menu and type `Command Prompt`, right-click and select `Run as adminsitrator`.
+- In the terminal, run the following command `lxrun /install /y` type a username and password for the root user.
+##### 2) Install an X environment:
+- Download *vcxsrv* from `https://sourceforge.net/projects/vcxsrv/` and install it
+- To start the X environment run the application `VcXsrv`
+##### 3) Starting the linux subsystem:
+- Press `Windows + R` and run `cmd`
+- Run the command `bash`, this gives you access to the linux terminal on Windows.        
+- From here, Windows users can follow the same commands than linux/macOS users, 
+just be sure to start the `VcXsrv` and run the commands on the bash terminal.
+- If copy/past does not work on Chromium or pgAdmin, right-click on the `VcXsrv` icon in the task bar and un-check `Clipboard may use PRIMARY selection`
+- Note: If you do not want to use the linux subsystem, use any other approach for using `ssh` and `X` enviroment on Windows.
 
 ### Using the Virual Machines </h4>
 Students can access a Linux Virtual Machine that contains all the necessary software for the assignments and tutorials.
