@@ -18,7 +18,7 @@ The first step is to connect to the virtual machine as [explained](../README.md#
 
 #### 3) Creating the tables and importing the data
 - Extract the dataset:
-    - `tar -zxvf /home/ubuntu/mds2018/data/modern_db_dataset_sql.tar.gz -C /home/ubuntu/`
+    - `tar -zxvf /home/ubuntu/mds2018/data/movielens.tar.gz -C /home/ubuntu/`
 - Start the PostgreSQL shell as movielens_user: `psql -h localhost -d movielens -U movielens_user -W` and type the password `movi3s` 
 - Paste the following commands:
 ```
@@ -50,10 +50,10 @@ CREATE TABLE dbpedia
  
 CREATE INDEX dbpedia_movie_id ON dbpedia USING btree (movie_id);
 ```
-- Load data to the movies table `\copy movie from '/home/ubuntu/modern_db_dataset/movie.csv' csv header;`
-- Load data to the user_profile table `\copy user_profile from '/home/ubuntu/modern_db_dataset/user.csv' csv header;`
-- Load data to the movies table `\copy rating from '/home/ubuntu/modern_db_dataset/rating.csv' csv header;`
-- Load data to the movies table `\copy dbpedia from '/home/ubuntu/modern_db_dataset/dbpedia.csv' csv header;`
+- Load data to the movies table `\copy movie from '/home/ubuntu/movielens/movie.csv' csv header;`
+- Load data to the user_profile table `\copy user_profile from '/home/ubuntu/movielens/user.csv' csv header;`
+- Load data to the movies table `\copy rating from '/home/ubuntu/movielens/rating.csv' csv header;`
+- Load data to the movies table `\copy dbpedia from '/home/ubuntu/movielens/dbpedia.csv' csv header;`
 
 #### 4) Doing the assignment
 You can use the PostgreSQL
