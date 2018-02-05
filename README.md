@@ -27,7 +27,7 @@ just be sure to start the `VcXsrv` and run the commands on the bash terminal.
 - If copy/past does not work on Chromium or pgAdmin, right-click on the `VcXsrv` icon in the task bar and un-check `Clipboard may use PRIMARY selection`
 - Note: If you do not want to use the linux subsystem, use any other approach for using `ssh` and `X` enviroment on Windows.
 
-### Using the Virual Machines </h4>
+### Using the Virtual Machines </h4>
 Students can access a Linux Virtual Machine that contains all the necessary software for the assignments and tutorials.
 #### 1) SSH/Credential Setup 
 - Accessing the VM requires *password-less ssh login*. To do this, you are required to configure a SSH credential in https://version.aalto.fi service (see: https://version.aalto.fi/gitlab/help/ssh/README.md).
@@ -38,7 +38,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
         - `cd ~/.ssh/`
         - `ssh-keygen -t rsa -C "{your.name@aalto.fi}" -b 4096` 
             - Replace the placeholder `{your.name@aalto.fi}` with your real Aalto e-mail.
-            - By default, the credentials ]will be named id_rsa and id_rsa.pub, you can use other name if needed.
+            - By default, the credentials will be named id_rsa and id_rsa.pub, you can use other name if needed.
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
         Replace the placeholder `{your-aalto-username}` with your real Aalto user:
