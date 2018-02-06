@@ -41,11 +41,12 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             - By default, the credentials will be named id_rsa and id_rsa.pub, you can use other name if needed.
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
-        Replace the placeholder `{your-aalto-username}` with your real Aalto user:
+        Replace the placeholder `{your-aalto-username}` with your real Aalto user.
+	For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi:
         ``` 
         Host mds
             HostName mds.cs.aalto.fi
-            IdentityFile ~/.ssh/id_rsa # Use the private key of the corresponding public key that you added to http://version.aalto.fi
+            IdentityFile ~/.ssh/id_rsa
             IdentitiesOnly yes
             Compression yes
             ForwardX11 yes
