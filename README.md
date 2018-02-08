@@ -37,11 +37,11 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
         - `mkdir ~/.ssh/` #If it does not exist
         - `cd ~/.ssh/`
         - `ssh-keygen -t rsa -C "{your.name@aalto.fi}" -b 4096` 
-            - Replace the placeholder `{your.name@aalto.fi}` with your real Aalto e-mail.
+            - Replace the placeholder `{your.name@aalto.fi}` with your Aalto e-mail.
             - By default, the credentials will be named id_rsa and id_rsa.pub, you can use other name if needed.
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
-        Replace the placeholder `{your-aalto-username}` with your real Aalto user.
+        Replace the placeholder `{your-aalto-username}` with your Aalto user name.
 	For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi):
         ``` 
         Host mds
@@ -56,13 +56,13 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
 
 #### 2) Accessing the VM 
 - Note: You have to be using a machine inside Aalto's domain. At home and in personal computers, use the VPN (https://inside.aalto.fi/display/ITServices/VPN).
-- `export DISPLAY=127.0.0.1:0; ssh mds` # Fix the *DISPLAY* variable as required
+- `export DISPLAY=127.0.0.1:0; ssh -X mds` # Fix the *DISPLAY* variable as required
+    - The value of `DISPLAY` environment variable could vary across different operating systems and fix the *DISPLAY* variable as required. In Linux machines set `DISPLAY` to `:0` (`export DISPLAY=:0`) and in macOS set `DISPLAY` to `127.0.0.1:0` (`export DISPLAY=127.0.0.1:0`).
     - The first time you connect, you will see a message "The authenticity of host ... ... Are you sure you want to continue connecting (yes/no)?"
     - Type `yes`
 
 #### 3) Starting *Jupyter Notebook*
-- 
-- In the VM run the command `source ~/env35/bin/activate; jupyter notebook`
+- In the VM run command `source ~/env35/bin/activate; jupyter notebook`
 - This should prompt a Chromium Web Browser, if not, check your configuration. 
 - The password is `db2018`
 
