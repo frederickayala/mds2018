@@ -36,12 +36,12 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
         - `cd`
         - `mkdir ~/.ssh/` #If it does not exist
         - `cd ~/.ssh/`
-        - `ssh-keygen -t rsa -C "{your.name@aalto.fi}" -b 4096` 
-            - Replace the placeholder `{your.name@aalto.fi}` with your Aalto e-mail.
+        - `ssh-keygen -t rsa -C "your.name@aalto.fi" -b 4096` 
+            - Replace the placeholder `your.name@aalto.fi` with your Aalto e-mail.
             - By default, the credentials will be named id_rsa and id_rsa.pub, you can use other name if needed.
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
-        Replace the placeholder `{your-aalto-username}` with your Aalto user name.
+        Replace the placeholder `your-aalto-username` with your Aalto user name.
 	For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi):
         ``` 
         Host mds
@@ -51,7 +51,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             Compression yes
             ForwardX11 yes
             Port 22
-            User {your-aalto-username}
+            User your-aalto-username
         ```
 
 #### 2) Accessing the VM 
