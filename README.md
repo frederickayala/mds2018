@@ -41,7 +41,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             - By default, the credentials will be named id_rsa and id_rsa.pub, you can use other name if needed.
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
-        Replace the placeholder `your-aalto-username` with your Aalto user name.
+        - Replace the placeholder `your-aalto-username` with your Aalto user name.
 	For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi):
         ``` 
         Host mds
@@ -53,6 +53,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
             Port 22
             User your-aalto-username
         ```
+        - Add `XAuthLocation /opt/X11/bin/xauth` to your config file if you are using a mac and facing issues with lauching jupyter notebook.
 
 #### 2) Accessing the VM 
 - Note: You have to be using a machine inside Aalto's domain. At home and in personal computers, use the VPN (https://inside.aalto.fi/display/ITServices/VPN).
