@@ -3,5 +3,5 @@
 	- `source ~/env35/bin/activate`
 - Start Jupyter Notebook:
 	- jupyter notebook --notebook-dir /home/ubuntu/mds2018/
-- A Chromium browser should pop-up loading the page `https:localhost:8888`
+- A Chromium browser should pop-up loading the page `http:localhost:8888`
 - The password is `db2018`
