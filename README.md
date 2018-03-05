@@ -42,7 +42,7 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
         - Copy the content of `~/.ssh/id_rsa.pub` (or the name you used) and add it as a new key to https://version.aalto.fi/gitlab/profile/keys
         - Paste the following lines in `~/.ssh/config`. Create the file if it does not exists. 
         - Replace the placeholder `your-aalto-username` with your Aalto user name.
-	For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi):
+    For `IdentityFile`, use the private key of the corresponding public key that you added to [http://version.aalto.fi](http://version.aalto.fi):
         ``` 
         Host mds
             HostName mds.cs.aalto.fi
@@ -64,7 +64,9 @@ Students can access a Linux Virtual Machine that contains all the necessary soft
 
 #### 3) Starting *Jupyter Notebook*
 - In the VM run command `source ~/env35/bin/activate; jupyter notebook`
-- This should prompt a Chromium Web Browser, if not, check your configuration. 
+- This should prompt a Chromium Web Browser:
+    - Check your X11 configuration if the browser does not start. Try `pgAdmin4`, if the user interface appears, then the problem is with the browser.
+    - If you are having an error: `Trace/breakpoint trap (core dumped)`, please install firefox `sudo apt install firefox`
 - The password is `db2018`
 
 Further instructions are provided in the corresponding session folders.
