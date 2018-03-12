@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage[ruled, vlined,nofillcomment,linesnumbered]{algorithm2e}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+% \usepackage{subfig}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{nicefrac}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{float}
+\usepackage{xspace}
+\usepackage{mathtools}
+\usepackage{etex}
+\usepackage{natbib}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{bbm}
+\usepackage[nodayofweek]{datetime}
+
+\usepackage{tikz,pgfplots,pgfplotstable}
+\usetikzlibrary{positioning,fit,shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{arrows}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newdateformat{mydate}{\shortmonthname[\THEMONTH] \twodigit{\THEDAY}{}, \THEYEAR}
+
+\title{Example Solution for Assignment 1}
+\author{}
+\date{\mydate\today}
+
+
+% \input{defines}
+
+\begin{document}
+
+\maketitle
+
+\input{q1}
+\input{q2}
+
+
+\section{Question 3}\label{question-3}
+
+\subsection{via whole heap file}\label{via-whole-heap-file}
+
+num. records / num. records per page = 10\^{}6 / 10 = 10\^{}5
+
+\subsection{B+ tree index (alternative
+2)}\label{b-tree-index-alternative-2}
+
+\begin{itemize}
+\tightlist
+\item
+  \(log_F f 10^5\) + num. of qualifying pages
+\item
+  \(f\) is \(\frac{\beta}{\alpha}\)
+\item
+  \(\alpha\): occupancy ratio of B+ tree
+\item
+  \(\beta\): ratio of (size of one data entry) / (size of one record),
+  for example, in the lecture notes 10\%, because of alternative 2
+\end{itemize}
+
+observed mistakes:
+
+\begin{itemize}
+\tightlist
+\item
+  use the ratio (0.15) from the slides without explaining/defining
+\end{itemize}
+
+\subsection{hash index (alternative 2)}\label{hash-index-alternative-2}
+
+again using the notation from above, need to use
+
+\(\frac{\beta}{\alpha} 10^5\) + num. of qualifying pages
+
+observed mistakes:
+
+\begin{itemize}
+\tightlist
+\item
+  use the ratio (0.15) from the slides without explaining/defining
+\end{itemize}
+
+\section{question 4}\label{question-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ceil(4000000 / 17) =235295
+\item
+  1 + ceil(log\_16 235295) = 1 + ceil(4.46) = 6
+\item
+  2 x 4000000 x 6 = 4.8 x 10ˆ7
+\item
+  solve the linear equation of
+  \texttt{1\ +\ ceil(log\_\{B-1\}\ \textbackslash{}frac\{N\}\{B\})\ =\ 2}
+  gives \texttt{N\ \textasciitilde{}=\ 2000.5}. So we need at least 2001
+  buffer pages
+\end{enumerate}
+
+observed mistakes:
+
+\begin{itemize}
+\tightlist
+\item
+  for 2, the base is 2 instead of 16
+\end{itemize}
+
+\section{question 5}\label{question-5}
+
+denote:
+
+\begin{itemize}
+\tightlist
+\item
+  M=1000 pages for R
+\item
+  N=50 pages for S
+\item
+  B=52 for num. of buffer pages
+\end{itemize}
+
+\subsection{page-oriented simple nested loops
+join}\label{page-oriented-simple-nested-loops-join}
+
+\begin{itemize}
+\tightlist
+\item
+  if R is the outer loop, 1000+1000*50=51000
+\item
+  if S is the outer loop, 50+50*1000=50050
+\end{itemize}
+
+\subsection{block nested loops join}\label{block-nested-loops-join}
+
+\begin{itemize}
+\tightlist
+\item
+  if R is outer loop, then M+ceil(M / (B-2))*N=2000
+\item
+  if S is outer loop, then N+ceil(N / (B-2))*M=1050
+\end{itemize}
+
+comment:
+
+\begin{itemize}
+\tightlist
+\item
+  should we choose which relation as outer loop so to minimize the page
+  cost?
+\end{itemize}
+
+\subsection{sort-merge join}\label{sort-merge-join}
+
+for sorting on both relations:
+
+\begin{itemize}
+\tightlist
+\item
+  \(2 * M * (1 + ceil(\log_{B-1}(ceil(\frac{M}{B})))) = 2 * 1000 * (1 + 1) = 4000\)
+\item
+  \(2 * N * (1 + ceil(\log_{B-1}(ceil(\frac{N}{B})))) = 2 * 50 * (1 + 0) = 100\)
+\end{itemize}
+
+for merging:
+
+\begin{itemize}
+\tightlist
+\item
+  M + N = 1050
+\end{itemize}
+
+in total: 5150
+
+\subsection{hash join}\label{hash-join}
+
+\begin{itemize}
+\tightlist
+\item
+  3M+3N = 3150
+\end{itemize}
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+
+
