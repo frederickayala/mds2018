@@ -1,0 +1,21 @@
+\section{Question 4}\label{question-4}
+
+\subsection{Number of runs in the first pass}
+
+$\ceil{\frac{4000000}{17}} = 235295$
+
+\subsection{Number of runs to sort completely}
+
+$1 + \ceil{\log_{16} 235295} = 1 + \ceil{4.46} = 6$
+
+\subsection{Total I/O cost}
+
+$2 \times 4^6 \times 6 = 4.8 \times 10^7$
+
+\subsection{Number of buffer pages needed to sort in exactly two passes}
+
+Denote $B=17$ and $N=4\times 10^6$, we need to solve the following linear equation:
+
+\[1 + \ceil{log_{B-1} \frac{N}{B}} = 2 \]
+
+which  gives $N \approx 2000.5$. So we need at least 2001 buffer pages

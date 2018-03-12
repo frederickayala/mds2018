@@ -1,18 +1,12 @@
 \section{Question 1}\label{question-1}
 
-(Credit to: Tuomo Tanila)
+(Credit: Tuomo Tanila)
 
 \subsection{Get all records with search key greater than 40}\label{section}
 
 The tree nodes that must be fetched are: \textbf{I1}, \textbf{I2} as well as every node between \textbf{L2-L8} (that is \textbf{L2, L3, L4, L5, L6, L7} and \textbf{L8}). As we are searching all the records with search key greater than 40, we begin from the top node and choose the lower node that is between 30 and 80, that is \textbf{I2} in this case. After this we choose the node that is between 35 and 42. Finally we get to the leaf nodes and go all of them through.
 
-\paragraph{common mistakes:}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{I3} is visited (note that leaf nodes are doubly-linked) so \textbf{I3} is not visited
-\end{itemize}
+Note that \textbf{I3} is not visited because leaf nodes are doubly-linked. 
 
 
 \subsection{Inserting a record with search key 88}\label{section-1}
