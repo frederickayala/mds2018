@@ -2,7 +2,7 @@
 - Each folder contains the presentation, code, and instructions for the tutorials and assignments:
     - [1_sql](./1_sql): SQL and semi-structured data using *PostgreSQL 10* 09/02/2018.
     - [2_search](./2_search): Information retrieval and search with *ElasticSearch* 05/03/2018.
-    - [3_bigdata](./3_bigdata): Big Data processing with *Apache Spark* 19/03/2018.
+    - [3_bigdata](./3_spark): Big Data processing with *Apache Spark* 19/03/2018.
 - Dataset:
     - For the tree tutorials and programming assignments we will be working with the [MovieLens 1M Dataset](http://grouplens.org/datasets/movielens/1m/) dataset provided by GroupLens Research.
     - Check the [README](http://files.grouplens.org/datasets/movielens/ml-1m-README.txt) file of the dataset for additional information.
